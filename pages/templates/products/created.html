@@ -1,0 +1,12 @@
+{% extends 'pages/base.html' %}
+{% block title %}Product Created{% endblock %}
+{% block header_title %}Product Created{% endblock %}
+
+{% block content %}
+<div class="card mx-auto" style="max-width: 500px;">
+  <div class="card-body text-center">
+    <h5 class="card-title text-success">✅ Product created successfully!</h5>
+    <a href="{% url 'index' %}" class="btn btn-primary mt-3">Go back to Products</a>
+  </div>
+</div>
+{% endblock %}
