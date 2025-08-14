@@ -1,1 +1,0 @@
-##**Tutoriales django mvc**
