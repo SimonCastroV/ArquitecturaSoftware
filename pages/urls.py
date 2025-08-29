@@ -9,6 +9,9 @@ from .views import (
     CartView, 
     CartRemoveAllView,
 )
+from pages.utils import ImageLocalStorage
+from pages.views import ImageViewFactory, ImageViewNoDI
+
 
 urlpatterns = [ 
     path("", homePageView.as_view(), name='home'), 
@@ -22,4 +25,6 @@ urlpatterns = [
     path("cart/removeAll", CartRemoveAllView.as_view(), name="cart_removeAll"),
     path("image/", ImageViewFactory(ImageLocalStorage()).as_view(), name="image_index"), 
     path("image/save", ImageViewFactory(ImageLocalStorage()).as_view(), name="image_save"),
+    path('imagenotdi/', ImageViewNoDI.as_view(), name='imagenodi_index'), 
+    path('image/save', ImageViewNoDI.as_view(), name='imagenodi_save'),
 ]
